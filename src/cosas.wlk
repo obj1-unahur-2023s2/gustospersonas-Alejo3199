@@ -1,118 +1,66 @@
 import colores.*
 import materiales.*
+
 object remera {
-	var color
-	var material
-	var peso
-	method color(unColor){
-		color= unColor
-	}
-	method material(unMaterial){
-		material = unMaterial
-	}
-	method peso (gramos){
-		peso = gramos
-	}
+	method color() = rojo
+	method material() = lino
+	method peso() = 800
 }
-object pelota {
-	var color
-	var material
-	var peso
-	method color(unColor){
-		color= unColor
-	}
-	method material(unMaterial){
-		material = unMaterial
-	}
-	method peso (gramos){
-		peso = gramos
-	}
-}
+object pelota{
+	method color() = pardo
+	method material() = cuero
+	method peso() = 1300
+} 	
 object biblioteca {
-	var color
-	var material
-	var peso
-	method color(unColor){
-		color= unColor
-	}
-	method material(unMaterial){
-		material = unMaterial
-	}
-	method peso (gramos){
-		peso = gramos
-	}
+	method color() = verde
+	method material() = madera
+	method peso() = 8000
 }
 object munieco {
-	var color
-	var material
 	var peso
-	method color(unColor){
-		color= unColor
-	}
-	method material(unMaterial){
-		material = unMaterial
-	}
-	method peso (gramos){
-		peso = gramos
+	method color() = rojo
+	method material() = lino
+	method peso(unPeso){
+		peso = unPeso
 	}
 }
 object placa {
-	var color
-	var material
 	var peso
-	method color(unColor){
-		color= unColor
+	var color
+	method color(unColor) {
+		color = unColor
 	}
-	method material(unMaterial){
-		material = unMaterial
-	}
-	method peso (gramos){
+	method material() = cobre
+	method peso(gramos){
 		peso = gramos
 	}
 }
-
 
 
 
 object arito {
-	var color
-	var material
-	var peso
-	method color(unColor){
-		color= unColor
-	}
-	method material(unMaterial){
-		material = unMaterial
-	}
-	method peso (gramos){
-		peso = gramos
-	}
+	method color() = celeste
+	method material() = cobre
+	method peso() = 180
 }
 object banquito {
-	var color
-	var material
-	var peso
-	method color(unColor){
-		color= unColor
+	var color = naranja
+	method color(unColor) {
+		color = unColor
 	}
-	method material(unMaterial){
-		material = unMaterial
-	}
-	method peso (gramos){
-		peso = gramos
-	}
+	method material() = madera
+	method peso() = 1700
 }
 object cajita {
-	var color
-	var material
-	var peso
-	method color(unColor){
-		color= unColor
+	var cosaDentro
+	var peso = 400
+	method cosaDentro(unaCosa) {
+		cosaDentro = unaCosa
 	}
-	method material(unMaterial){
-		material = unMaterial
-	}
-	method peso (gramos){
-		peso = gramos
-	}
+	method color() = rojo
+	method material() = cobre
+	method peso() {
+		peso += cosaDentro.peso()
+		return peso 
+		}
 }
